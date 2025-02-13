@@ -9,9 +9,7 @@ public class FahrenheitaCelsius {
 		System.out.println("Introduce la temperatura en Fahrenheit: ");
 		double temp = entrada.nextDouble(); 
 		double newtemp = (temp - 32) * 1.8;
-		System.out.printf("La temperatur en Celsius es: %.2fCº", newtemp);
-		System.out.println("Hello World");
-
+		System.out.printf("La temperatur en Celsius es: %.2fºC", newtemp);
 	}
 
 }

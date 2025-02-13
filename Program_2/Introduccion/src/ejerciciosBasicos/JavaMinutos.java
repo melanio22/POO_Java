@@ -5,11 +5,10 @@ public class JavaMinutos {
 
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner (System.in);
-		System.out.println("Introduce tu edad");
+		System.out.println("Introduce tu edad en años");
 		int edad = entrada.nextInt();
 		int minutos = edad*365*24*60;
-		System.out.printf("Has vivido",minutos,"minutos");
+		System.out.printf("Has vivido al menos %f minutos",minutos);
 		
-
 	}
 }
