@@ -127,20 +127,17 @@ package POO;
 }
   */
 
-
-
-
 package POO;
 
 // Clase Grado
 class Grado {
     private String nombre;
-    private Estudiante[] estudiantes; // Cambiado a array de Estudiante
+    private Estudiante[] estudiantes; 
     private int contadorEstudiantes;
 
     public Grado(String nombre) {
         this.nombre = nombre;
-        this.estudiantes = new Estudiante[5]; // Tamaño fijo
+        this.estudiantes = new Estudiante[5]; 
         this.contadorEstudiantes = 0;
     }
 

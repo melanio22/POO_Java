@@ -8,14 +8,14 @@ public class GradoApp {
         Asignatura pro1 = new Asignatura("Programación", 102, "Primero", 6);
         Asignatura alg2 = new Asignatura("Algebra",103,"Segundo",6);
         
-        // Crear estudiante
+        // Crear estudiantes
         Estudiante estudiante1 = new Estudiante("Markel", "12345678A", "Primero");
         estudiante1.agregarAsignatura(mat1);
         estudiante1.agregarAsignatura(pro1);
         Estudiante estudiante2 = new Estudiante("Gorka", "47812046K", "Segundo");
         estudiante2.agregarAsignatura(alg2);
         
-        // Mostrar asignaturas del estudiante
+        // Printear asignaturas de cada estudiante
         estudiante1.mostrarAsignaturas();
         estudiante2.mostrarAsignaturas();
         
@@ -25,7 +25,7 @@ public class GradoApp {
         grado1.agregarEstudiante(estudiante1);
         grado1.agregarEstudiante(estudiante2);
         
-        // Mostrar estudiantes del grado
+        // Printear los estudiantes de cada grado
         grado1.mostrarEstudiantes();
 		
 	}

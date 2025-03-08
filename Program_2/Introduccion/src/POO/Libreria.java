@@ -1,76 +1,90 @@
 package POO;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-
-
 //Para copiar arrays usar Java.utils.CopyOf !!!!
 // Clase Libro con encapsulación y constructor
-class Libro {
-    private String titulo;
-    private String autor;
-    private String ano;
-    private String isbn;
 
-    public Libro(String titulo, String autor, String ano, String isbn) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.ano = ano;
-        this.isbn = isbn;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public String getAno() {
-        return ano;
-    }
-
-    public String getIsbn() {
-        return isbn;
-    }
-
-    public void mostrarInfo() {
-        System.out.println("Título: " + titulo);
-        System.out.println("Autor: " + autor);
-        System.out.println("Año: " + ano);
-        System.out.println("ISBN: " + isbn);
-    }
+class Libreria{
+	private String nombre;
+	private String calle;
+	private String localidad;
+	private String cp;
+	private Libro[] libros = new Libro[4];
+	
+//METODOS
+	//constructor
+	public Libreria(String nombre, String calle, String localidad, String cp) {
+		super();
+		this.nombre = nombre;
+		this.calle = calle;
+		this.localidad = localidad;
+		this.cp = cp;
+	}
+	//getters y setters
+	public void setNombre(){
+		this.nombre = nombre;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	//metodo para añadir un libro a la libreria 
+	public void addBook(Libro[] libro) {
+		for (int i=0;i<4;i++) {
+			if (libro[i] == null){
+				libros = Arrays.copyOf(libro, libro.length);
+			}
+			else if(libros[i]!= null){
+				System.out.println("El espacio" + i + "está lleno");
+			}
+			else if(libros[i]!= null && i == 4){
+				System.out.println("Ya no queda espacio para más libros");
+			}
+		}
+		
+	}
+	@Override
+	public String toString() {
+		return "Libreria [nombre=" + nombre + ", calle=" + calle + ", localidad=" + localidad + ", cp=" + cp
+				+ ", libros=" + Arrays.toString(libros) + "]";
+	}
 }
+class Libro{
+	//atributos de la clase libro
+	private int ano;
+	private String isbn;
+	private String titulo;
+	private String autor;
 
-// Clase Biblioteca que almacena una lista de libros
-class Biblioteca {
-    private String nombre;
-    private String calle;
-    private String localidad;
-    private String cp;
-    private List<Libro> libros;
+	//constructor de libro
+	public Libro(String titulo, String autor, int ano, String isbn) {
+		super();
+		this.titulo = titulo;
+		this.autor = autor;
+		this.ano = ano;
+		this.isbn = isbn;
+	}
+	
+	//getters y setters
+	public String getAutor() {
+		return autor;
+	}
 
-    public Biblioteca(String nombre, String calle, String localidad, String cp) {
-        this.nombre = nombre;
-        this.calle = calle;
-        this.localidad = localidad;
-        this.cp = cp;
-        this.libros = new ArrayList<>();
-    }
+	public int getAno() {
+		return ano;
+	}
 
-    public void agregarLibro(Libro libro) {
-        libros.add(libro);
-    }
+	public String getIsbn() {
+		return isbn;
+	}
 
-    public void mostrarLibros() {
-        if (libros.isEmpty()) {
-            System.out.println("No hay libros en la biblioteca.");
-        } else {
-            for (Libro libro : libros) {
-                libro.mostrarInfo();
-            }
-        }
-    }
+	public String getTitulo() {
+		return titulo;
+	}
+
+	@Override
+	public String toString() {
+		return "Libro [ano=" + ano + ", isbn=" + isbn + ", titulo=" + titulo + ", autor=" + autor + "]";
+	}
 }
-
