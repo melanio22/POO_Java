@@ -9,7 +9,7 @@ public class Consonantes {
 		System.out.println("Introduce una frase: ");
 		String frase = scanner.nextLine();
 		String mayus = frase.toUpperCase();
-		Char[] lista = new Char[mayus.length()];
+		String[] lista = new String[mayus.length()];
 		
 		for (int i = 0; i<mayus.length(); i++) {
 			lista = mayus.charAt(i);
