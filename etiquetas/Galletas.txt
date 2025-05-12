@@ -1,0 +1,12 @@
+NOMBRE:
+Galletas
+
+INGREDIENTES:
+- pan
+- agua
+- leche
+
+ALÉRGENOS:
+gluten, lactosa
+
+N°: 4455434
